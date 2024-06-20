@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agregar Producto</h1>
+        <form action="Agregar" id="alta-producto">
+            <div class="form-group">
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio: </label>
+                <input type="number" id="precio" name="precio" required>
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoria: </label>
+                <textarea id="descripcion" name="categoria" required></textarea>
+            </div>
+            
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+<!--      <script src="scripts.js"></script> -->
+</body>
+</html>

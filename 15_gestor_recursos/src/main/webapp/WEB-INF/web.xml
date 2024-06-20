@@ -10,7 +10,7 @@
     <servlet-name>AltaProducto</servlet-name>
     <url-pattern>/AltaProducto</url-pattern>
   </servlet-mapping>
-  <display-name>15_gestor_productos_jm</display-name>
+  <display-name>15_gestor_recursos</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -20,13 +20,11 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-    <description></description>
-    <display-name>VerPorCategoria</display-name>
-    <servlet-name>VerPorCategoria</servlet-name>
-    <servlet-class>servlets.VerPorCategoria</servlet-class>
+    <servlet-name>Buscador</servlet-name>
+    <servlet-class>servlets.Buscador</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>VerPorCategoria</servlet-name>
-    <url-pattern>/VerPorCategoria</url-pattern>
+    <servlet-name>Buscador</servlet-name>
+    <url-pattern>/Buscador</url-pattern>
   </servlet-mapping>
 </web-app>

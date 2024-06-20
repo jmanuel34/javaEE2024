@@ -13,7 +13,7 @@ public class ProductosService {
 		productos.add(producto);
 	}
 
-	public List<Producto> recuperarPorCategoria(String categoria) {
+	public List<Producto> buscarPorCategoria(String categoria) {
 		return productos.stream()
 				.filter(p -> p.getCategoria().equals(categoria))
 				.toList();
@@ -23,6 +23,10 @@ public class ProductosService {
 		boolean result = false;
 		if (productos.removeIf(p->p.getNombre().equals(nombre))) result = true;
 		return result;		
+	}
+	
+	public List<Producto> verTodos() {
+		return productos;
 	}
 	
 }

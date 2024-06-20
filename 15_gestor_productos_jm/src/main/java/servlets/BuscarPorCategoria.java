@@ -11,16 +11,15 @@ import jakarta.servlet.http.HttpServletResponse;
 import model.Producto;
 import service.ProductosService;
 
-@WebServlet("/VerPorCategoria")
-public class VerPorCategoria extends HttpServlet {
+@WebServlet("/Buscar")
+public class BuscarPorCategoria extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		var productosService= new ProductosService();
-		List<Producto> productos = productosService.recuperarPorCategoria(request.getParameter("categoria")));  
-		
-		
+		List<Producto> productos = productosService.buscarPorCategoria(request.getParameter("categoria"));  
+		request.setAttribute("productos", productos);
+		request.getRequestDispatcher("productos.jsp").forward(request, response);
 	}
-
 }

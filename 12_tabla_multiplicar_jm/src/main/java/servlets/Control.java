@@ -15,6 +15,7 @@ public class Control extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher dispatcher;
 		String numero=request.getParameter("numero");
+		// comentario
 		try {
 			int num = Integer.parseInt(numero);
 //			request.setAttribute("num", num);

@@ -8,7 +8,11 @@
 </head>
 <body>
 <div>
-	Error: El numero <%request.getParameter("numero"); %> no es correcto
+<%!public void m() {
+		int a = 10;
+	}%>
+
+	Error: El numero <%=request.getParameter("numero")%> no es correcto
 	<a href = "inicio.jsp">Volver</a>
 </div>
 </body>

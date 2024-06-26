@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
-  <servlet>
-    <description></description>
-    <display-name>VerPorCategoria</display-name>
-    <servlet-name>VerPorCategoria</servlet-name>
-    <servlet-class>servlets.VerPorCategoria</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>VerPorCategoria</servlet-name>
-    <url-pattern>/VerPorCategoria</url-pattern>
-  </servlet-mapping>
-  <display-name>01_ejemplo_app</display-name>
+  <display-name>32_buscador_bd_jm</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -28,5 +18,25 @@
   <servlet-mapping>
     <servlet-name>AltaAction</servlet-name>
     <url-pattern>/AltaAction</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EliminarAction</display-name>
+    <servlet-name>EliminarAction</servlet-name>
+    <servlet-class>servlets.EliminarAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EliminarAction</servlet-name>
+    <url-pattern>/EliminarAction</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BuscarPorIdAction</display-name>
+    <servlet-name>BuscarPorIdAction</servlet-name>
+    <servlet-class>servlets.BuscarPorIdAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BuscarPorIdAction</servlet-name>
+    <url-pattern>/BuscarPorIdAction</url-pattern>
   </servlet-mapping>
 </web-app>

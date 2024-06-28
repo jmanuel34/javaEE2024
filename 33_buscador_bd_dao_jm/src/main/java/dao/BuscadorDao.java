@@ -11,9 +11,10 @@ import jakarta.persistence.TypedQuery;
 import model.Resultado;
 
 public class BuscadorDao {
-	private EntityManager eManager;
+	private static EntityManager eManager;
 	
-	public BuscadorDao() {
+	// Aplicacion de patron Singleton. solo se ejecuta una vez en la vida de la aplicacion
+	static  {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("buscador");
 		eManager.getEntityManagerFactory().createEntityManager();
 	}
@@ -30,7 +31,7 @@ public class BuscadorDao {
 	}
 	
 	public Resultado findByUrl (String url) {
-		
+		return eManager.find(null, url);
 	}
 	
 	public Resultado findById(int idResultado) {

@@ -7,8 +7,8 @@ public class UsuariosService {
 	
 	public boolean findUsuario(String usuario,  String password) {
 		UsuariosDao userDao = new UsuariosDao();
-		Usuario user = userDao.finById(usuario);
-		if (user.getPassword().equals(password)) return true;
+		Usuario user = userDao.findByPk(usuario);
+		if ((user!= null) && user.getPassword().equals(password)) return true;
 		return false;
 	}
 }

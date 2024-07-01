@@ -18,8 +18,8 @@ public class BuscarPorPrecio extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		CursosService service = new CursosService();
 		int precio = Integer.parseInt(request.getParameter("precio"));
-		List<Curso> resultados = service.buscarCursosPorPrecioMaximo(precio);
-		request.setAttribute("resultados", resultados);
+		List<Curso> cursos = service.buscarCursosPorPrecioMaximo(precio);
+		request.setAttribute("cursos", cursos);
 	}
 
 }

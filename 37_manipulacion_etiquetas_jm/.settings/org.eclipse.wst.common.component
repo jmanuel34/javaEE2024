@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
         
     <wb-module deploy-name="37_manipulacion_etiquetas_jm">
@@ -8,3 +9,15 @@
     </wb-module>
     
 </project-modules>
+=======
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
+    <wb-module deploy-name="37_manipulacion_etiquetas_jm">
+                
+        <wb-resource deploy-path="/" source-path="/public"/>
+        <property name="context-root" value="37_manipulacion_etiquetas_jm"/>
+            
+    </wb-module>
+    
+</project-modules>
+>>>>>>> branch 'master' of https://github.com/jmanuel34/javaee2024

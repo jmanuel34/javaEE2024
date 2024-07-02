@@ -4,11 +4,28 @@ import java.util.List;
 import java.util.Optional;
 
 import dao.BuscadorDao;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import model.Resultado;
 
 
 public class BuscadorService {
-	BuscadorDao dao = new BuscadorDao();
+	private static BuscadorService service;
+	private EntityManager eManager;
+	
+	private BuscadorService() {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("buscador");
+		eManager = factory.createEntityManager();
+		service = this;
+	}
+	
+	public static BuscadorService getInstance() {
+		if (service==null)  {
+			new BuscadorService();
+		}
+		return service;
+	}
 	
 	public boolean altaResultado(Resultado resultado) {
 			if (dao.findByUrl(resultado.getUrl())==null) {

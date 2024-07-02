@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+Introduce nombre: <input type "text" id="nombre"><br><br>
+<input type= "button" value= "saludar" onclick="saludar();">
+<p id="respuesta"> Bienvenido</p>
+
+	<script type="text/javascript">
+		function saludar() {
+			var nombre = document.getElementById("nombre")
+			var resp=document.getElementById("respuesta");
+			resp.innerHTML= "<B>Bienvenido "+nombre.value+ "</b"
+		}	
+	</script>
+
+</body>
+</html>

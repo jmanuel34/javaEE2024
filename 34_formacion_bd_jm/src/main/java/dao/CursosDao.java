@@ -5,6 +5,7 @@ import java.util.List;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.NoResultException;
 import jakarta.persistence.Persistence;
 import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
@@ -19,7 +20,7 @@ public class CursosDao {
 	// aplicacion
 	static {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("cursos");
-		eManager.getEntityManagerFactory().createEntityManager();
+		eManager=factory.createEntityManager();
 	}
 
 	public void save(Curso curso) {
@@ -64,5 +65,15 @@ public class CursosDao {
 		tx.begin();
 		query.executeUpdate();
 		tx.commit();
+	}
+	public Curso findByName(String nombre) {
+		String jpql="select c from Curso c where c.nombre=?1";
+		TypedQuery<Curso> query=eManager.createQuery(jpql,Curso.class);
+		query.setParameter(1, nombre);
+		try {
+			return query.getSingleResult();
+		}catch(NoResultException ex) {
+			return null;
+		}
 	}
 }

@@ -14,13 +14,14 @@ import service.CursosService;
 public class AgregarAction extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		CursosService service = new CursosService();
+		
 
-		String nombre = 	request.getParameter("nombre"); 
+		String nombre = request.getParameter("nombre"); 
 		String tematica = request.getParameter("tematica"); 
 		int duracion = 	Integer.parseInt(request.getParameter("duracion"));
 		double precio = Double.parseDouble(request.getParameter("precio"));
 		Curso curso = new Curso(0,nombre, tematica, duracion, precio);
+		CursosService service = new CursosService();
 		if (service.agregar(curso)) { 
 			request.setAttribute("resultado", true);
 		}

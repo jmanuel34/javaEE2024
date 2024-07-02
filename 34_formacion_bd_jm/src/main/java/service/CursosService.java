@@ -10,8 +10,8 @@ public class CursosService {
 	CursosDao cDao = new CursosDao();
 
 	public boolean agregar(Curso curso) {
-		int codigo= curso.getCodigoCurso();
-		if (cDao.findById(codigo).getCodigoCurso() != curso.getCodigoCurso()) {
+//		String nombre = curso.getNombre();
+		if (cDao.findByName (curso.getNombre()) == null) {
 			cDao.save(curso);
 			return true;
 		}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="button-container">
+        <form action="controlador" method="post">
+            <button type="submit" name="action" value="accion1" class="styled-button">Botón 1</button>
+        </form>
+        <form action="controlador" method="post">
+            <button type="submit" name="action" value="accion2" class="styled-button">Botón 2</button>
+        </form>
+        <form action="controlador" method="post">
+            <button type="submit" name="action" value="accion3" class="styled-button">Botón 3</button>
+        </form>
+        <form action="controlador" method="post">
+            <button type="submit" name="action" value="accion4" class="styled-button">Botón 4</button>
+        </form>
+    </div>
+
+	<p id = "pr">Esto es  un texto</p>
+	<input type = "button" value = "Poner Negrita" onclick="cambiarEstilo"();>
+	<script type="text/javascript">	
+		function cambiarEstilo() {
+			var pr = document.getDocumentById("pr");
+			pr.style.fontWeigth="Bold";
+			
+		}
+	</script>
+
+
+</body>
+</html>

@@ -2,61 +2,12 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
   <display-name>34_formacion_bd_jm</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>login.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <description></description>
-    <display-name>AgregarAction</display-name>
-    <servlet-name>AgregarAction</servlet-name>
-    <servlet-class>dao.AgregarAction</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AgregarAction</servlet-name>
-    <url-pattern>/AgregarAction</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>EliminarAction</display-name>
-    <servlet-name>EliminarAction</servlet-name>
-    <servlet-class>servlets.EliminarAction</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>EliminarAction</servlet-name>
-    <url-pattern>/EliminarAction</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>BuscarPorPrecio</display-name>
-    <servlet-name>BuscarPorPrecio</servlet-name>
-    <servlet-class>servlets.BuscarPorPrecio</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>BuscarPorPrecio</servlet-name>
-    <url-pattern>/BuscarPorPrecio</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>ActualizarDuracionAction</display-name>
-    <servlet-name>ActualizarDuracionAction</servlet-name>
-    <servlet-class>servlets.ActualizarDuracionAction</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ActualizarDuracionAction</servlet-name>
-    <url-pattern>/ActualizarDuracionAction</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>Controller</display-name>
-    <servlet-name>Controller</servlet-name>
-    <servlet-class>servlets.Controller</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Controller</servlet-name>
-    <url-pattern>/Controller</url-pattern>
-  </servlet-mapping>
+  
 </web-app>

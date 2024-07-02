@@ -7,14 +7,14 @@ import model.Usuario;
 
 public class UsuariosDao {
 	
-	private EntityManager eManager;
+	private static EntityManager eManager;
 	
-	public UsuariosDao() {
-		EntityManagerFactory factory=Persistence.createEntityManagerFactory("buscador");
+	static {
+		EntityManagerFactory factory=Persistence.createEntityManagerFactory("cursos");
 		eManager=factory.createEntityManager();
 	}
 	
-	public Usuario finById(String usuario) {
+	public Usuario findByPk(String usuario) {
 		return eManager.find(Usuario.class, usuario);
 	}
 

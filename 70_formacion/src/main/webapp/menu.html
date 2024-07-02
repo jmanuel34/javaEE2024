@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticación de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- las siguientes etiquetas meta sirven para que el navegador
+	no cachee la página
+	-->
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Last-Modified" content="0">
+	<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+
+</head>
+<body>
+	<div>
+		<h1>Gestor de Cursos</h1>
+
+  			<div class="button-container">
+                    <form action="Controller?option=toAlta" method="POST">
+                        <button class="violet-button" type="submit">Agregar Curso</button>
+                    </form>
+                    <form action="Controller?option=toBuscarPorPrecio" method="POST">
+                        <button class="violet-button" type="submit">Buscar por Precio</button>     
+                    </form>
+ <!--                     
+ 					<form action="Controller?option=toBuscarPorId" method="POST">
+                        <button class="violet-button" type="submit">Buscar por Id</button>     
+                    </form>
+                    <form action="Controller?option=toBuscarPorTema" method="POST">
+                        <button class="violet-button" type="submit">Buscar por Tema</button>
+                    </form> 
+
+                    <form action="Controller?option=toEliminarPorNombre" method="POST">
+                        <button class="violet-button" type="submit">Eliminar por Id</button>
+                    </form>
+-->
+ 					<form action="Controller?option=toEliminarPorNombre" method="POST">
+                        <button class="violet-button" type="submit">Eliminar por nombre</button>
+                    </form>
+                    <form action="Controller?option=doCerrar" method="POST">
+                        <button class="violet-button" type="submit">Cerrar Sesion</button>
+                        
+		     </div>
+    </div>
+</body>
+</html> 

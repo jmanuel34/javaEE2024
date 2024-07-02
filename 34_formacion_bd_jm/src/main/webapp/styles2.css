@@ -1,5 +1,4 @@
 body {
-<<<<<<< HEAD
 	color:purple;
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -165,5 +164,5 @@ input[type="password"] {
 .btn[type="reset"] {
     background-color: #f44336;
     color: white;
->>>>>>> branch 'master' of https://github.com/jmanuel34/javaee2024
+
 }

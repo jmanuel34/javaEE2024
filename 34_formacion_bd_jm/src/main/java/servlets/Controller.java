@@ -29,10 +29,16 @@ public class Controller extends HttpServlet {
 				request.getRequestDispatcher("EliminarAction").include(request, response);
 				yield "menu.html";
 			}
+			
+			case "doEliminarPorNombre"-> {
+				request.getRequestDispatcher("EliminarPorNombreAction").include(request, response);
+				yield("menu.html");
+			}
 			case "doBuscarPorPrecio"->{
 				request.getRequestDispatcher("BuscarPorPrecioAction").include(request, response);
 				yield "resultadosPorPrecio.jsp";
 			}
+			
 			
 			case "doBuscarPorTema"->{
 				request.getRequestDispatcher("BuscarPorTemaAction").include(request, response);
@@ -44,7 +50,7 @@ public class Controller extends HttpServlet {
 			}
 			case "toAlta"->"agregar.jsp";
 			case "toBuscar"->"buscar.html";
-			case "toEliminar"->"eliminar.html";
+			case "toEliminarPorNombre"->"eliminar.jsp";
 			case "toBuscarPorPrecio"-> "buscarPorPrecio.html";
 			case "toBuscarResultados"->"buscarResultados.html";
 			case "toLogin"->"login.html";

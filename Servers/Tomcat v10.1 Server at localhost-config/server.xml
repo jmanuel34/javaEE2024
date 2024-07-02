@@ -140,11 +140,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-<<<<<<< HEAD
-      </Host>
-=======
-      <Context docBase="34_formacion_bd_jm" path="/34_formacion_bd_jm" reloadable="true" source="org.eclipse.jst.jee.server:34_formacion_bd_jm"/><Context docBase="34_formacion_bd" path="/34_formacion_bd" reloadable="true" source="org.eclipse.jst.jee.server:34_formacion_bd"/></Host>
->>>>>>> branch 'master' of https://github.com/jmanuel34/javaee2024
+      <Context docBase="34_formacion_bd" path="/34_formacion_bd" reloadable="true" source="org.eclipse.jst.jee.server:34_formacion_bd"/><Context docBase="34_formacion_bd_jm" path="/34_formacion_bd_jm" reloadable="true" source="org.eclipse.jst.jee.server:34_formacion_bd_jm"/><Context docBase="70_formacion" path="/70_formacion" reloadable="true" source="org.eclipse.jst.jee.server:70_formacion"/></Host>
     </Engine>
   </Service>
 </Server>

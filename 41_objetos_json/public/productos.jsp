@@ -53,14 +53,14 @@
 			let categoria=document.getElementById("categoria").value;
             let precio=document.getElementById("precio").value;
 			if((nombre.trim().length==0 )|| (categoria.trim().length==0)){
-				alert("Datos no v√°lidos. El nombre no puede estar vac√≠o");
+				alert("Datos no v·lidos. El nombre no puede estar vacÌo");
 				return false;
 			}
 			if(isNaN(edad)){
-				alert("Datos no v√°lidos. El campo edad debe ser num√©rico");
+				alert("Datos no v·lidos. El campo edad debe ser numÈrico");
 				return false;
 			}
-			alert("Datos v√°lidos!!");
+			alert("Datos v·lidos!!");
             var producto = new Object();
             producto.nombre=nombre;
             producto.categoria=categoria;

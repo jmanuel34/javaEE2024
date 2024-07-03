@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	Introduce número :<input type="text" id="numero"><br>
+	<input type ="button" onclick="calcular()" value="Cuadrado"><br><br>
+	<input type ="button" id="btLimpiar" value="Limpiar"><br><br>
+	
+	<p id="res">
+		
+	</p>
+	<script type="text/javascript">
+		// asociar evento a la funcion manejadora
+		/*$("#btLimpiar").click(limpiar);
+		
+		function limpiar() {
+			$("#numero").val("");
+			$("#res").html("");
+		}*/
+		// Asigna al evento click del boton una funcion.
+		$("#btLimpiar").click(function() {
+			$("#numero").val("");
+			$("#res").html("");
+		});
+		function calcular() {
+			var num=$("#numero").val();
+			$("#res").html()="<b>"+num*num+"</b>";
+		}
+	</script>
+</body>
+</html>

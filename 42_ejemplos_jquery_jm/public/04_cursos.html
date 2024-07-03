@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>Cursos</h1>
+    <p>Java</p><p>Python</p><p>Kubernetes</p><p>Spring Boot</p><p>Linux</p><br>
+    <h2>Duraciones</h2>
+    <b>120</b><b>80</b><b>60</b><b>75</b><b>50</b>
+    <br>
+    Duración máxima:<input type="text" id="duracion"><input type="button" value="Filtrar" id="filtrar">
+    <br>
+    <div id="cursos">
+    </div> 
+    
+    <script>
+        var cursos=[];
+        $("p").each(function(i,p){
+                var curso = new Object();
+                curso.nombre=p.innerText;
+                curso.duracion=parseInt($("b").get(i).innerText);
+                curso.asignaturas=parseInt(curso.duracion/30);
+                cursos.push(curso);
+                
+            });
+            $("#filtrar").click(function(){
+
+            });
+/*            
+            $.each(cursos,function(i,e) {
+                console.log(JSON.stringify(e));
+            });
+
+ 
+//*/
+        $("#guardar").click(function(){
+            /*
+            $("b").each(function(){
+                var curso = new Object();
+                curso.duracion=$this.val
+                cursos.put(curso);
+            }); //*/
+        });
+        console.log(cursos);
+    </script>
+</body>
+</html>
